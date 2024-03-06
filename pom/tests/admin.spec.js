@@ -7,5 +7,6 @@ test('The user must find an administrator.', async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.submitLoginForm('Admin', 'admin123')
     const adminPage = new AdminPage(page);
-    await adminPage.searchNameAdmin('nalim')
+    await adminPage.searchNameAdmin('Admin')
+    await page.pause()
 })
